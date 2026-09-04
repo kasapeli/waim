@@ -9,4 +9,5 @@ pub struct Cli {
 #[derive(Subcommand)]
 pub enum Args {
     Init,
+    Add { task: String },
 }
