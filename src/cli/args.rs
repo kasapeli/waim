@@ -1,12 +1,12 @@
 use clap::Parser;
 
 #[derive(Parser)]
-struct Cli {
+pub struct Cli {
     #[command(subcommand)]
-    command: Args,
+    pub command: Args,
 }
 
 #[derive(Subcommand)]
-enum Args {
+pub enum Args {
     Init,
 }
