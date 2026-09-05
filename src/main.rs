@@ -3,6 +3,7 @@ mod cli;
 use cli::{
     add::add_new,
     args::{Args, Cli, ListOpt},
+    delete::delete_by_id,
     init::create_file,
     list::{list_all, list_done, list_undone},
 };
@@ -31,6 +32,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                 list_undone()?;
             }
         },
+        Args::Delete { id } => {
+            delete_by_id(*id)?;
+        }
     }
 
     Ok(())
