@@ -4,7 +4,7 @@ use cli::{
     add::add_new,
     args::{Args, Cli, ListOpt},
     init::create_file,
-    list::list_all,
+    list::{list_all, list_done},
 };
 
 use clap::Parser;
@@ -24,7 +24,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             ListOpt::All => {
                 list_all()?;
             }
-            ListOpt::Done => {}
+            ListOpt::Done => {
+                list_done()?;
+            }
             ListOpt::Undone => {}
         },
     }
