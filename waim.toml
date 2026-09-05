@@ -1,14 +1,9 @@
 [[task]]
-id = 1
-task_name = "add delete feature"
-completion = false
-
-[[task]]
 id = 2
 task_name = "add read feature"
-completion = false
+completion = true
 
 [[task]]
 id = 3
 task_name = "add modifying completion"
-completion = false
+completion = true
