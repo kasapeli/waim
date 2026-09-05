@@ -7,3 +7,8 @@ completion = false
 id = 2
 task_name = "add read feature"
 completion = false
+
+[[task]]
+id = 3
+task_name = "add modifying completion"
+completion = false
