@@ -6,6 +6,7 @@ use cli::{
     delete::delete_by_id,
     init::create_file,
     list::{list_all, list_done, list_undone},
+    toggle::toggle_by_id,
 };
 
 use clap::Parser;
@@ -34,6 +35,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         },
         Args::Delete { id } => {
             delete_by_id(*id)?;
+        }
+        Args::Toggle { id } => {
+            toggle_by_id(*id)?;
         }
     }
 
