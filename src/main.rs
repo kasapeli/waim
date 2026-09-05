@@ -2,8 +2,9 @@ mod cli;
 
 use cli::{
     add::add_new,
-    args::{Args, Cli},
+    args::{Args, Cli, ListOpt},
     init::create_file,
+    list::list_all,
 };
 
 use clap::Parser;
@@ -19,6 +20,13 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         Args::Add { task } => {
             add_new(task.to_string())?;
         }
+        Args::List { opt } => match opt {
+            ListOpt::All => {
+                list_all()?;
+            }
+            ListOpt::Done => {}
+            ListOpt::Undone => {}
+        },
     }
 
     Ok(())
