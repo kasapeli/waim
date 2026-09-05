@@ -1,4 +1,4 @@
-## **W**hat **A**m **I** **M**issing?
+# **W**hat **A**m **I** **M**issing?
 
 A simple todo utility written in Rust.
 
