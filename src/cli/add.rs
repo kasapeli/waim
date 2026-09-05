@@ -1,20 +1,19 @@
 use std::{
     env,
     fs::{self, OpenOptions},
-    io::{self, BufRead, BufReader, Write},
-    path::Path,
+    io::Write,
 };
 
 use serde::{Deserialize, Serialize};
 
-#[derive(Deserialize)]
+#[derive(Deserialize, Serialize)]
 pub struct WaimFile {
     pub id: usize,
     pub task_name: String,
     pub completion: bool,
 }
 
-#[derive(Deserialize)]
+#[derive(Deserialize, Serialize)]
 pub struct Todo {
     pub task: Option<Vec<WaimFile>>,
 }
