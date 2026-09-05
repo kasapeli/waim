@@ -12,3 +12,13 @@ completion = true
 id = 4
 task_name = "add more readability"
 completion = false
+
+[[task]]
+id = 5
+task_name = "write man page (maybe"
+completion = false
+
+[[task]]
+id = 6
+task_name = "add better feedback to commands"
+completion = false
