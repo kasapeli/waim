@@ -1,7 +1,7 @@
 use std::{
     env,
-    fs::{self, OpenOptions},
-    io::{Result, Write},
+    fs::{self},
+    io::Result,
 };
 
 pub fn create_file() -> Result<()> {
