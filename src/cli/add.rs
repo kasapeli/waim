@@ -9,14 +9,14 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Deserialize)]
 pub struct WaimFile {
-    id: usize,
-    task_name: String,
-    completion: bool,
+    pub id: usize,
+    pub task_name: String,
+    pub completion: bool,
 }
 
 #[derive(Deserialize)]
 pub struct Todo {
-    task: Option<Vec<WaimFile>>,
+    pub task: Option<Vec<WaimFile>>,
 }
 
 pub fn add_new(task: String) -> Result<(), Box<dyn std::error::Error>> {
