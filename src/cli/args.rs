@@ -12,6 +12,7 @@ pub enum Args {
     Add { task: String },
     List { opt: ListOpt },
     Delete { id: usize },
+    Toggle { id: usize },
 }
 
 #[derive(ValueEnum, Clone, Copy, Debug, PartialEq, Eq)]
